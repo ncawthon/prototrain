@@ -1,0 +1,22 @@
+.btn{
+	&-orange, %orange{
+		background: rgb(254,159,0); 
+		background: -moz-linear-gradient(top,  rgba(254,159,0,1) 0%, rgba(241,94,0,1) 100%); 
+		background: -webkit-linear-gradient(top,  rgba(254,159,0,1) 0%,rgba(241,94,0,1) 100%); 
+		background: linear-gradient(to bottom,  rgba(254,159,0,1) 0%,rgba(241,94,0,1) 100%); 
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe9f00', endColorstr='#f15e00',GradientType=0 ); 
+		color:$white;
+		border:none;
+		font-family: $opensans;
+		@include fontsize(13px);
+		font-weight: $w7;
+		text-transform: capitalize;
+		&:hover{
+			background: rgb(241,94,0);
+			background: -moz-linear-gradient(top,  rgba(241,94,0,1) 0%, rgba(254,159,0,1) 100%);
+			background: -webkit-linear-gradient(top,  rgba(241,94,0,1) 0%,rgba(254,159,0,1) 100%);
+			background: linear-gradient(to bottom,  rgba(241,94,0,1) 0%,rgba(254,159,0,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f15e00', endColorstr='#fe9f00',GradientType=0 );
+		}
+	}
+}
