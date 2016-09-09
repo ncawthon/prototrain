@@ -1,0 +1,20 @@
+section{
+	&.header-image{
+		// float:left;
+		// width:100%;
+	}
+	&.carousel{}
+	&.newsletter{
+		margin-top:5px;
+		margin-bottom:25px;
+		background:rgba(255, 153, 0, 0.2);
+		border-top:1px solid lighten($black,90%);
+		border-bottom:1px solid lighten($black,90%);
+	}
+	&.about, %about{
+		margin-bottom: 35px;
+	}
+	&.accomodation{
+		@extend %about;
+	}
+}

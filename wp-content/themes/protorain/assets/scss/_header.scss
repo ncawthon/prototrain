@@ -1,0 +1,218 @@
+@import "variables";
+@import "custommixins";
+
+
+html{
+	font-size:100%;
+	height:100%;
+}
+body{
+	@include fontsize(16px);
+	line-height:19px;
+	height:100%;
+	color:#232932;
+	font-family:$arial;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight:$w7;
+}
+
+p{
+	@include fontsize(14px);
+	font-weight:$w4;
+	line-height:24px;
+}
+a{
+	color:$primary;
+	&:hover, &:focus{
+		color:lighten($primary,5%);
+	}
+}
+
+/**
+	List of content
+	1. Header
+	2. Navigation
+	3. Off canvas Navigation
+	4. Carousel
+	5. Newsletter
+	6.
+	**/
+
+//=============== Header ===================/
+.header{
+	background:lighten($black,20%);
+	margin-top:1px;
+	margin-bottom:1px;
+	a{
+		color:$white;
+	}
+}
+
+//=============== Main Navigation =========================/
+.menu{
+	>li{
+		border-left:1px solid rgba($white,0.5);
+		padding:0 15px;
+		&:first-child{
+			border-left:none;
+		}
+		&.current-menu-item{
+			a{
+				position: relative;
+				display: block;	
+				&:before{
+					content: ' ';
+					width:100%;
+					position:absolute;
+					left:0;
+					bottom:0;
+					height:3px;
+					background:$primary;
+				}
+			}
+		}
+		>a{
+			@include fontsize(14px);
+			line-height:28px;
+		}
+	}
+	&-main{
+		&_right{
+			@media (max-width:768px){
+				display:none;
+			}
+		}
+		&_left{
+			padding-top:5px;
+			padding-bottom:5px;
+			a{
+				display: block;
+			}
+		}
+	}
+	&.vertical {
+		height:100%;
+		> li{
+			border:none;
+			border-top:1px solid rgba($white,0.75%);
+			line-height:40px;
+			&:first-child{
+				border-top:none;
+			}
+		}
+	}
+}
+
+.title{
+	&-bar{
+		&-right, &-left{
+			padding:10px;
+			@media (min-width:769px){
+				display:none;
+			}
+			.menu-icon{
+				color:$white;
+			}
+		}
+	}
+}
+
+//=============== Off canvas navigation ===================/
+.off{
+	&-canvas{
+		&-content{
+			box-shadow:none;
+			padding-bottom:50px;
+		}
+		&-wrapper{
+			height: 100%;
+			&-inner{
+				height:100%;
+			}
+		}
+		&.position{
+			&-right, &-left{
+				height:100%;
+				// background:lighten($black,33%);
+			}
+		}
+		.menu {
+			> li{
+				&.current-menu-item {
+					a{		
+						&:before{
+							display:none;
+						}
+					}
+				}
+				a{
+					color:$white;
+					line-height:30px;
+				}
+			}
+		}
+		.is-drilldown{
+			background:lighten($black,15%);
+			height:100%;
+		}
+		.close-button{
+			background:lighten($black,15%);
+			top:0;
+			left:-40px;
+			position: absolute;
+			width:40px;
+			@include fontsize(40px);
+			color:$white;
+			line-height:52px;
+			padding-left:0;
+			z-index:999999;
+			&:hover{
+				// background:transparent;
+				color:$white;
+			}
+		}
+		&.is-open{
+			overflow-y:visible;
+			z-index:999999;
+		}
+	}
+}
+.js-off-canvas-exit{
+	z-index:99999;
+	background:rgba($black, 0.6);
+}
+
+//=============== Carousel ===================/
+@import 'banner';
+
+//=============== Newsletter ===================/
+.newsletter{
+	&-subscribe{
+		// margin-top:30px;
+		
+		padding-top:20px;
+		p{
+			@inlcude fontsize(14px);
+			color:lighten($black,30%);
+			text-align: center;
+		}
+		input{
+			margin-bottom: 0;
+			@media (max-width:639px){
+				margin-bottom:10px;
+				width:100%;
+			}
+			&[type="email"]{
+				line-height:50px;
+				vertical-align: middle;
+				height: 50px;
+			}
+		}
+		.button{
+			font-weight: $w7;
+			@include fontsize(18px);
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.button{
+	&-orange{
+		background: -webkit-linear-gradient(270deg, rgba(255, 153, 0, 1) 0%, rgba(255, 153, 0, 1) 0%, rgba(255, 102, 0, 1) 100%, rgba(255, 102, 0, 1) 100%);
+		background: -moz-linear-gradient(180deg, rgba(255, 153, 0, 1) 0%, rgba(255, 153, 0, 1) 0%, rgba(255, 102, 0, 1) 100%, rgba(255, 102, 0, 1) 100%);
+		background: linear-gradient(180deg, rgba(255, 153, 0, 1) 0%, rgba(255, 153, 0, 1) 0%, rgba(255, 102, 0, 1) 100%, rgba(255, 102, 0, 1) 100%);
+		border: none;
+		border-radius: 3px;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		&:hover{
+			background: rgb(241,94,0);
+			background: -moz-linear-gradient(top,  rgba(241,94,0,1) 0%, rgba(254,159,0,1) 100%);
+			background: -webkit-linear-gradient(top,  rgba(241,94,0,1) 0%,rgba(254,159,0,1) 100%);
+			background: linear-gradient(to bottom,  rgba(241,94,0,1) 0%,rgba(254,159,0,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f15e00', endColorstr='#fe9f00',GradientType=0 );
+		}
+	}
+}

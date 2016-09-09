@@ -1,0 +1,153 @@
+.banner{
+	&-home {
+		// height:480px;
+		overflow:hidden;
+		position:relative;
+		@media (max-width:991px){
+			height:auto;
+		}
+	}
+}
+.owl-stage-outer{
+	// height:480px;
+	@media (max-width:991px){
+		height:auto;
+	}
+}
+.homeitem{
+	position: relative;
+	// height:480px;
+	background-size:cover!important;
+	background-repeat:no-repeat !important;
+	background-position:50% 0 !important;
+	&-table{
+		position:absolute;
+		top:0;
+		left:0;
+		width:100%;
+		height:100%;
+		color: $white;
+		// display: table;
+		@media (max-width:767px){
+			position:relative;
+			background:$black;
+		}
+		.table-display{
+			height:100%;
+			display: table;
+			height: 100%;
+			width: 100%;
+			// padding-left: 15px;
+			// padding-right:15px;
+
+		}			
+		.item-desc{
+			display: table-cell;
+			vertical-align: bottom;
+			padding-bottom:7.5%;
+			h3{
+				@include fontsize(24px);
+			}
+			@media (max-width:991px){
+				padding-bottom:4.5%;
+			}
+			@media (max-width:767px){
+				padding-bottom:0;
+			}
+			&_wrapper{
+				padding-top:10px;
+				padding-bottom:10px;
+				background:rgba($black,0.5);
+				position:relative;
+				float:left;
+				width:100%;
+				// &:before{
+				// 	position:absolute;
+				// 	width:640px;
+				// 	background:rgba($black,0.5);
+				// 	left:-640px;
+				// 	top:0;
+				// 	height:100%;
+				// 	content:'';
+				// }
+				// &:after{
+				// 	position:absolute;
+				// 	width:640px;
+				// 	background:rgba($black,0.5);
+				// 	right:-640px;
+				// 	top:0;
+				// 	height:100%;
+				// 	content:'';
+				// }
+			}
+		}
+
+	}
+}
+
+//owl carousel
+.owl{
+	&-controls{
+		// position: absolute;
+		width: 100%;
+		height: 100%;
+		// bottom: 0;
+		// height:100%;
+		z-index:9;
+	}
+	&-theme{
+		.owl-nav{
+			margin-top:0;
+			// position: absolute;
+			// height:40px;
+			// color:$white;
+			// width:100%;
+			// top:0;
+			// right:0;
+			// bottom:0;
+			// left:0;
+			// margin:auto;
+		}
+		.owl-dots{
+			bottom:0;
+			position: absolute;
+			width:100%;
+			z-index: 999;
+			@media (max-width:767px){
+				display:none!important;
+			}
+		}
+	}
+	&-carousel{
+		.owl{
+			&-controls{
+				.owl{
+					&-nav{
+						.owl{
+							&-prev, &-next{
+								position:absolute;
+								width:40px;
+								height:40px;
+								background:transparent;
+								top:0;
+								bottom:0;
+								margin:auto;
+								.fa{
+									@include fontsize(40px);
+								}
+							}
+							&-prev{
+								left:15px;
+								right:auto;
+							}
+							&-next{
+								left:auto;
+								right:15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
